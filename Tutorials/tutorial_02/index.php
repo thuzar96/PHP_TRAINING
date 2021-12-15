@@ -17,7 +17,7 @@ $a=11; $b=0; $c=0; $space = 1;
     echo " &nbsp;&nbsp;&nbsp;   ";
 
      for ($b = 1; $b <= 2*$c-1; $b++)
-     printf("<font size='6' color='red'> * </font> ");
+     printf("<font size='11' color='black'> * </font> ");
      printf("<br>");
        $space=$space-1;
   }
@@ -29,7 +29,7 @@ $a=11; $b=0; $c=0; $space = 1;
      }
     $space++;
     for ($b = 1 ; $b <= 2*($a-$c)-1; $b++) {
-      printf("<font size='6' color='red'> * </font> ");
+      printf("<font size='11' color='black'> * </font> ");
    }
      echo "<br>";
   }

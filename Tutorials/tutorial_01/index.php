@@ -22,7 +22,7 @@
         }
 		    else
         {
-          echo "<td height=30px width=30px bgcolor=#000000></td>";
+          echo "<td class='black'></td>";
         }
       }
         echo "</tr>";

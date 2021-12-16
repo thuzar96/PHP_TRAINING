@@ -1,0 +1,21 @@
+.log-in {
+  width: 1080px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  background-color: #a19c9c;
+}
+
+.username {
+  text-align: center;
+}
+
+.password {
+  text-align: center;
+}
+
+.log {
+  background-color: #a17979;
+  text-align: center;
+
+}

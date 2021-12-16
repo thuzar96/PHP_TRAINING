@@ -11,27 +11,27 @@
 <body>
   <?php
 
-  $a = 11;
-  $b = 0;
-  $c = 0;
+  $num = 11;
+  $star= 0;
+  $string = 0;
   $space = 1;
-  $space = $a - 1;
-  for ($c = 1; $c <= $a; $c++) {
-    for ($b = 1; $b <= $space; $b++)
+  $space = $num - 1;
+  for ($string = 1; $string <= $num; $string++) {
+    for ($star = 1; $star <= $space; $star++)
       echo " &nbsp;&nbsp;&nbsp;   ";
 
-    for ($b = 1; $b <= 2 * $c - 1; $b++)
+    for ($star = 1; $star <= 2 * $string - 1; $star++)
       printf("<font size='11' color='black'> * </font> ");
     printf("<br>");
     $space = $space - 1;
   }
   $space = 1;
-  for ($c = 1; $c <= $a - 1; $c++) {
-    for ($b = 1; $b <= $space; $b++) {
+  for ($string = 1; $string <= $num - 1; $string++) {
+    for ($star = 1; $star <= $space; $star++) {
       echo " &nbsp;&nbsp;&nbsp;  ";
     }
     $space++;
-    for ($b = 1; $b <= 2 * ($a - $c) - 1; $b++) {
+    for ($star = 1; $star <= 2 * ($num - $string) - 1; $star++) {
       printf("<font size='11' color='black'> * </font> ");
     }
     echo "<br>";

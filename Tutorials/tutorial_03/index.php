@@ -118,7 +118,7 @@
     $month = $_POST['MONTH'];//select month
     $year = $_POST['YEAR'];//select year
 
-    $dob = $d . '-' . $m . '-' . $y;// selected date of birth
+    $dob = $day . '-' . $month . '-' . $year;// selected date of birth
 
     $bday = new DateTime($dob);// obj declaration for dob
 

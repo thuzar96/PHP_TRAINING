@@ -56,7 +56,7 @@
     <h2>Excel File</h2>
     <?php
     //reading excel file
-    require_once 'xlsx.php';
+    require 'library/vendor/autoload.php';
     if ($xlsx = SimpleXLSX::parse('sample.xlsx')) {
       echo "<table><tbody>";
       $i = 0;

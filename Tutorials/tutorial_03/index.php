@@ -25,7 +25,7 @@ return 'Your Age: ' .$diff->y. 'Years, '.$diff->m.'Months, '.$diff->d.' Days';
     <form>
     <label>Date of Birth</label>
     <input type="date" name="dob">
-    <input type="submit" value="Calulating Age">
+    <input type="submit" value="Calulating Age" class="calculate">
     </form>
   </div>
   <!--/.input-date-->

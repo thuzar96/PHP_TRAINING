@@ -5,7 +5,7 @@ include('library/phpqrode/qrlib.php');
 
     // how to save PNG codes to server
     
-    $tempDir = "qrcodes";
+    $tempDir = "qrcodes/";
     
     $codeContents = 'This is my QR code';
     

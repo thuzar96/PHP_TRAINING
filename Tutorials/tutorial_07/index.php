@@ -1,34 +1,30 @@
-<?php
-echo "Generating QR code";
-include('library/phpqrode/qrlib.php');
-    include('config.php');
+<!DOCTYPE html>
+<html lang="en">
 
-    // how to save PNG codes to server
-    
-    $tempDir = "qrcodes/";
-    
-    $codeContents = 'This is my QR code';
-    
-    // we need to generate filename somehow, 
-    // with md5 or with database ID used to obtains $codeContents...
-    $fileName = '005_file_'.md5($codeContents).'.png';
-    
-    $pngAbsoluteFilePath = $tempDir.$fileName;
-    $urlRelativeFilePath = $tempDir.$fileName;
-    
-    // generating
-    if (!file_exists($pngAbsoluteFilePath)) {
-        QRcode::png($codeContents, $pngAbsoluteFilePath);
-        echo 'File generated!';
-        echo '<hr />';
-    } else {
-        echo 'File already generated! We can use this cached file to speed up site on common codes!';
-        echo '<hr />';
-    }
-    
-    echo 'Server PNG File: '.$pngAbsoluteFilePath;
-    echo '<hr />';
-    
-    // displaying
-    echo '<img src="'.$urlRelativeFilePath.'" />'
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code generator</title>
+</head>
+
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="id"> ID</label>
+        <input type="text" name="input_id">
+        <input type="submit" name="submit" value="SAVE">
+    </form>
+</body>
+<?php
+include 'library/phpqrcode/qrlib.php';
+  
+// $text variable has data for QR 
+$text = "GEEKS FOR GEEKS";
+  
+// QR Code generation using png()
+// When this function has only the
+// text parameter it directly
+// outputs QR in the browser
+QRcode::png($text);
 ?>
+</html>

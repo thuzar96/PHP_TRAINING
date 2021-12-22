@@ -26,7 +26,7 @@
       <input type="radio" name="gender" value="Female">Female
       <input type="radio" name="gender" value="Others">Others
       <br><br>
-      <input type="submit" name="submit" value="Create">
+      <input type="submit" name="create" value="Create">
     </fieldset>
   </form>
   <?php
@@ -34,16 +34,15 @@
   include "index.php";
 
   //to insert new data into table
-  if (isset($_POST['submit'])) {
+  if (isset($_POST['create'])) {
     $id=$_POST['id'];
     $first_name = $_POST['firstname'];
     $last_name = $_POST['lastname'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['pwd'];
     $gender = $_POST['gender'];
   }
-  $sql = "INSERT INTO 'user_info' ('id','firstname','lastname','email','password','gender') VALUES ('$id','$first_name', '$last_name','$email','$password','$gender')";
-
+  $sql = "INSERT INTO user_info (id,firstname,lastname,email,pwd,gender) VALUES ('$id','$first_name','$last_name','$email','$password','$gender')";
   $result = $conn->query($sql);
 
   if ($result == TRUE) {

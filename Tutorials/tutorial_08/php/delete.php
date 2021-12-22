@@ -1,6 +1,6 @@
 <?php
 require_once "../index.php";
-//include "index.php";
+include "index.php";
  if (isset($_GET['id'])) {
    $user_id = $_GET['id'];
    $sql= "DELETE FROM 'user_info' WHERE 'id'='$user_id'";

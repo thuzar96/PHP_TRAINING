@@ -1,4 +1,5 @@
 <?php
+require_once "../index.php";
 include "index.php";
 
 if (isset($_POST['update'])) {
@@ -24,8 +25,8 @@ if (isset($_GET['id'])) {
   $sql = "SELECT * FROM 'user_info' WHERE 'id'='$user_id'";
   $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
+  if ($result->rowCount() > 0) {
+    while ($row = $result->fetch()) {
       $first_name = $row['firstname'];
       $last_name = $row['lastname'];
       $email = $row['email'];

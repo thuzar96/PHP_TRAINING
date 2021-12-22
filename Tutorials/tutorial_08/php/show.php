@@ -1,4 +1,5 @@
 <?php
+ require_once "../index.php";
  include "index.php";
  $sql= "SELECT * FROM user_info";
 
@@ -30,8 +31,8 @@
             </thead>
             <tbody>
                 <?php
-                if ($result->num_rows>0) {
-                    while ($row = $result->fetch_assoc()) {
+                if ($result->rowCount()>0) {
+                    while ($row = $result->fetch()) {
                 ?>
                 <tr>
                     <td><?php echo $row['id'];?></td>
